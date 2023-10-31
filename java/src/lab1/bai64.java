@@ -1,7 +1,6 @@
+// Example 4: bai64.java
 package lab1;
-
 import java.util.Scanner;
-
 public class bai64 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -34,7 +33,8 @@ public class bai64 {
         String[] monthShortNames = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         
         for (int i = 0; i < months.length; i++) {
-            if (inputMonth.equalsIgnoreCase(months[i]) || inputMonth.equalsIgnoreCase(monthAbbreviations[i]) || inputMonth.equalsIgnoreCase(monthShortNames[i]) || inputMonth.equals(Integer.toString(i + 1))) {
+            if (inputMonth.equalsIgnoreCase(months[i]) || inputMonth.equalsIgnoreCase(monthAbbreviations[i]) || inputMonth.equalsIgnoreCase(monthShortNames[i]) 
+            		|| inputMonth.equals(Integer.toString(i + 1))) {
                 return i + 1; // Trả về số tháng (1-12)
             }
         }
