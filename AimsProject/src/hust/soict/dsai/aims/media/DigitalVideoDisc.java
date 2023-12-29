@@ -1,13 +1,15 @@
 package hust.soict.dsai.aims.media;
 
-public class DigitalVideoDisc extends Disc implements Playable{
+import hust.soict.dsai.aims.exception.PlayerException;
+
+public class DigitalVideoDisc extends Disc implements Playable {
 	private static int nbDigitalVideoDisc = 0;
-	public int id = nbDigitalVideoDisc;
 	
 	public DigitalVideoDisc(String title) {
 		super();
 		this.title = title;
 		nbDigitalVideoDisc++;
+		this.id=nbDigitalVideoDisc;
 	}
 	public DigitalVideoDisc(String title, String category, float cost) {
 		super();
@@ -15,6 +17,8 @@ public class DigitalVideoDisc extends Disc implements Playable{
 		this.category = category;
 		this.cost = cost;
 		nbDigitalVideoDisc++;
+		this.id=nbDigitalVideoDisc;
+
 
 	}
 	public DigitalVideoDisc(String title, String category, String director, float cost) {
@@ -24,6 +28,8 @@ public class DigitalVideoDisc extends Disc implements Playable{
 		this.director = director;
 		this.cost = cost;
 		nbDigitalVideoDisc++;
+		this.id=nbDigitalVideoDisc;
+
 
 	}
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
@@ -34,7 +40,12 @@ public class DigitalVideoDisc extends Disc implements Playable{
 		this.length = length;
 		this.cost = cost;
 		nbDigitalVideoDisc++;
+		this.id=nbDigitalVideoDisc;
+
 		
+	}
+	public DigitalVideoDisc() {
+		// TODO Auto-generated constructor stub
 	}
 	//kiểm tra trùng tile
 	public boolean trungTitle(String title1) {
@@ -45,10 +56,17 @@ public class DigitalVideoDisc extends Disc implements Playable{
 		return "DVD - " + title + " - " + category + " - " + director + " - "
 				+ length + ": " + cost + "$";
 	}
-	public void play()
+	public void play() throws PlayerException
 	{
+		if(this.getLength()>0)
+		{	
 		System.out.println("Playing DVD: " + this.getTitle());
 		System.out.println("DVD length: " + this.getLength());
+		}
+		else
+		{
+			throw new PlayerException("ERROR: DVD length is non-positive!");
+		}
 	}
 
 }

@@ -1,10 +1,6 @@
 package hust.soict.dsai.aims.media;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.*;
-
-
 public class Book extends Media {	
 	private List<String> authors=new ArrayList<String>();
 	public Book(int id,String title,String category,float cost)
@@ -13,6 +9,9 @@ public class Book extends Media {
 	  this.title=title;
 	  this.category=category;
 	  this.cost=cost;
+	}
+	public Book() {
+		// TODO Auto-generated constructor stub
 	}
 	public List<String> getAuthors() {
 		return authors;
@@ -44,4 +43,3 @@ public class Book extends Media {
 	}
 	
 }
-

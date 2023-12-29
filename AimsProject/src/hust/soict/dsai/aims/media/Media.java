@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 public abstract class Media {
 	public int id;
-	protected String title;
+	public String title;
 	protected String category;
 	protected float cost;
 	public static final Comparator<Media> COMPARE_BY_TITLE_COST =

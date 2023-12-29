@@ -1,8 +1,8 @@
 package hust.soict.dsai.aims.media;
 
 public class Disc extends Media{
-	public int length;
-	public String director;
+	protected int length;
+	protected String director;
 	public int getLength() {
 		return length;
 	}

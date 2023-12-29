@@ -1,11 +1,12 @@
 package hust.soict.dsai.aims.cart.Cart;
-
 import java.util.*;
 import hust.soict.dsai.aims.media.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
-	private List<Media> itemsOrdered= new ArrayList<Media>();
+	public ObservableList<Media> itemsOrdered= FXCollections.observableArrayList();
 	public void addMedia(Media m)
 	{
 	    
@@ -15,6 +16,12 @@ public class Cart {
 		}
 	  else System.out.println("Can not add!");
 	  
+	}
+	public ObservableList<Media> getItemsOrdered() {
+		return itemsOrdered;
+	}
+	public void setItemsOrdered(ObservableList<Media> itemsOrdered) {
+		this.itemsOrdered = itemsOrdered;
 	}
 	public void removeMedia(Media m)
 	{
@@ -55,15 +62,15 @@ public class Cart {
 	    }
 	//tìm theo tiêu đề
 	
-/*	public void searchCartTitle() {
+	public void searchCartTitle() {
 		String title1;
 		int sum = 0;
 		Scanner keyboard = new Scanner(System.in);
-		String checkString = "1";
-		System.out.println("Input title: ");
+		System.out.println("nhap title: ");
 		title1 = keyboard.nextLine();
 		for(Media dvd:itemsOrdered) {
-			if(dvd.trungTitle(title1) == true) {
+			if(dvd.title.equals(title1)) 
+			{
 				System.out.println(dvd.toString());
 				sum ++;
 				break;
@@ -72,7 +79,7 @@ public class Cart {
 		if(sum == 0) {
 			System.out.println("Found!");
 		}
-		}*/
+		}
 	//in xe đẩy 
 	public void printCart() {int j = 0;
 
@@ -87,4 +94,20 @@ public class Cart {
 	        System.out.println("***************************************************");
 	        
 	    }
+	public ObservableList<Media> searchID(int id) {
+		ObservableList<Media> x= FXCollections.observableArrayList();
+		for(Media m : itemsOrdered)
+			 if(m.getId()==id)
+				 x.add(m);
+			
+		return x;
+	}
+	public ObservableList<Media> searchTitle(String s) {
+		ObservableList<Media> x= FXCollections.observableArrayList();
+		for(Media m : itemsOrdered)
+			 if(m.getTitle().equals(s))
+				 x.add(m);
+			
+		return x;
+	}
 }
