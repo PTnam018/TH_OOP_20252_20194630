@@ -1,4 +1,4 @@
-package lab2;
+package hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 import java.time.LocalDate;
 
@@ -170,7 +170,7 @@ public class DigitalVideoDisc {
 		return "DVD " + title + " - " + category + " - " + " - " +director+ " - "+length + ": " +cost +" $";
 	}
 
-    boolean search(String title) {
+    public boolean search(String title) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

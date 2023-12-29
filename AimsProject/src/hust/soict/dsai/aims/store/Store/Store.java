@@ -1,6 +1,6 @@
-package lab2;
+package hust.soict.dsai.aims.store.Store;
 
-import lab2.DigitalVideoDisc ;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
 public class Store {
 
 

@@ -1,6 +1,6 @@
+package hust.soict.dsai.aims.cart.Cart;
 
-
-package lab2;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
 
 public class Cart {
 	public static final int N=20;
