@@ -1,4 +1,4 @@
-//Example 5: bai65.java
+//Example. 5: bai65.java
 package lab1;
 
 import java.util.Arrays;

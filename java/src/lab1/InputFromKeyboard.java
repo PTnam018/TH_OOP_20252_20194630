@@ -1,4 +1,4 @@
-// Example 2: InputFromKeyboard.java
+// .Example 2: InputFromKeyboard.java
 package lab1;
 
 import java.util.Scanner;

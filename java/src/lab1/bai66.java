@@ -1,6 +1,6 @@
 // Example 6: bai66.java
 package lab1;
-
+//
 import java.util.Scanner;
 
 public class bai66 {

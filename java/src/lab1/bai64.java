@@ -1,4 +1,4 @@
-// Example 4: bai64.java
+// .Example 4: bai64.java
 package lab1;
 import java.util.Scanner;
 public class bai64 {
